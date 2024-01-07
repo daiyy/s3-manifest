@@ -1,0 +1,15 @@
+{
+    "sourceBucket": "example-source-bucket",
+    "destinationBucket": "arn:aws:s3:::example-inventory-destination-bucket",
+    "version": "2016-11-30",
+    "creationTimestamp" : "1514944800000",
+    "fileFormat": "CSV",
+    "fileSchema": "Bucket, Key, VersionId, IsLatest, IsDeleteMarker, Size, LastModifiedDate, ETag, StorageClass, IsMultipartUploaded, ReplicationStatus, EncryptionStatus, ObjectLockRetainUntilDate, ObjectLockMode, ObjectLockLegalHoldStatus, IntelligentTieringAccessTier, BucketKeyStatus, ChecksumAlgorithm, ObjectAccessControlList, ObjectOwner",
+    "files": [
+        {
+            "key": "Inventory/example-source-bucket/2016-11-06T21-32Z/files/939c6d46-85a9-4ba8-87bd-9db705a579ce.csv.gz",
+            "size": 2147483647,
+            "MD5checksum": "f11166069f1990abeb9c97ace9cdfabc"
+        }
+    ]
+}
