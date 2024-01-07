@@ -2,6 +2,12 @@
 name = "s3-manifest"
 version = "0.1.0"
 edition = "2021"
+authors = ["daiyy <daiyiyang@hotmail.com>"]
+readme = "README.md"
+license = "Apache-2.0 OR MIT"
+description = "Strongly-typed manifest structs used by Amazon S3 in Rust"
+repository = "https://github.com/daiyy/s3-manifest"
+documentation = "https://docs.rs/s3-manifest"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
