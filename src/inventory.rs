@@ -1,5 +1,6 @@
 use serde::{Deserialize, Serialize};
 
+/// checksum string from manifest.checksum
 pub struct ManifestChecksum(String);
 
 impl From<&[u8; 33]> for ManifestChecksum {
@@ -8,6 +9,7 @@ impl From<&[u8; 33]> for ManifestChecksum {
     }
 }
 
+/// each inventory file inside of manifest.json
 #[derive(Clone, Debug, Default, Deserialize, PartialEq, Serialize)]
 pub struct InventoryFile {
     pub key: String,
@@ -16,6 +18,7 @@ pub struct InventoryFile {
     pub md5: String,
 }
 
+/// manifest.json itself
 #[derive(Clone, Debug, Default, Deserialize, PartialEq, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct InventoryManifest {
@@ -34,6 +37,7 @@ mod test {
     use md5;
 
     #[test]
+    #[cfg(feature = "inventory")]
     fn test_manifest_csv_serde() {
         let data = include_bytes!("../data/inventory/csv/manifest.json");
         let parsed: InventoryManifest = serde_json::from_slice(data).unwrap();
@@ -43,6 +47,7 @@ mod test {
     }
 
     #[test]
+    #[cfg(feature = "inventory")]
     fn test_manifest_csv_checksum() {
         let data = include_bytes!("../data/inventory/csv/manifest.json");
         let md5 = include_bytes!("../data/inventory/csv/manifest.checksum");
