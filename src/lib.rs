@@ -13,3 +13,7 @@
 /// definitions for S3 Inventory
 #[cfg(feature = "inventory")]
 pub mod inventory;
+
+/// definitions for S3 Batch Completion Report
+#[cfg(feature = "batch")]
+pub mod batch;
