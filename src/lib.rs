@@ -17,3 +17,7 @@ pub mod inventory;
 /// definitions for S3 Batch Completion Report
 #[cfg(feature = "batch")]
 pub mod batch;
+
+/// definitions for S3 Storage Lens Metrics Export
+#[cfg(feature = "lens")]
+pub mod lens;

@@ -17,6 +17,7 @@ serde_json = "1"
 md5 = "0.7.0"
 
 [features]
-default = ["inventory", "batch"]
+default = ["inventory", "batch", "lens"]
 inventory = []
 batch = []
+lens = []
